@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarWash 97 - Merci</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: #333;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .card {
+            border: none;
+            border-radius: 1rem;
+            background-color: #ffffffee;
+        }
+        h1, h2 {
+            color: #fff;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Merci pour votre paiement !</h1>
+        <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+            <h4 class="mb-3 text-center">Recevez votre facture par e-mail</h4>
+            <form id="emailForm" action="https://formspree.io/f/myzjkeqw" method="POST">
+                <input type="hidden" name="_subject" value="Merci pour votre achat voici votre facture">
+                <input type="hidden" name="Facture" value="https://www.artfordplus.com/wp-content/uploads/2020/07/FACTURE-ARTFORDPLUS_N1-1.jpg">
+                <input type="hidden" name="_next" value="https://www.artfordplus.com/wp-content/uploads/2020/07/FACTURE-ARTFORDPLUS_N1-1.jpg">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse e-mail</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="exemple@email.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Envoyer la facture</button>
+            </form>
+
+            <div class="text-center mt-3">
+                <a href="https://www.artfordplus.com/wp-content/uploads/2020/07/FACTURE-ARTFORDPLUS_N1-1.jpg" class="btn btn-success" target="_blank">
+                    Cliquez ici pour voir votre facture
+                </a>
+            </div>
+            <div class="text-center mt-3">
+                <a href="Accueil.html" class="btn btn-secondary">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
